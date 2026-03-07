@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Built Zeal</title>
   <style>
+    /* --- Tweakable Variables --- */
+    :root {
+      --vertical-offset: 15%; /* change this to move text up/down */
+      --heading-size: 2rem;   /* adjust H1 size */
+      --subtext-size: 1rem;   /* adjust P size */
+    }
+
     html, body {
       height: 100%;
       margin: 0;
@@ -13,8 +20,9 @@
     body {
       display: flex;
       flex-direction: column;
-      justify-content: center; /* centers vertically */
-      align-items: center;     /* centers horizontally */
+      justify-content: center;
+      align-items: center;
+      padding-top: var(--vertical-offset);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #ffffff;
       color: #111111;
@@ -22,12 +30,12 @@
     }
 
     h1 {
-      font-size: 2.5rem; /* smaller than before */
+      font-size: var(--heading-size);
       margin: 0.5rem 0;
     }
 
     p {
-      font-size: 1.2rem; /* slightly smaller */
+      font-size: var(--subtext-size);
       color: #555555;
       margin: 0;
     }
